@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<graph>
+    <node id="P"/>
+    <node id="Q"/>
+    <node id="Q0"/>
+    <node id="Q1"/>
+         
+    <edge id="PQ" from="P" to="Q" fftime="10" capacity="200" beta="4" alpha="0.15" directed="true"/>
+    <edge id="PQ0" from="P" to="Q0" fftime="20" capacity="400" beta="4" alpha="0.15" directed="true"/>
+    <edge id="PQ1" from="P" to="Q1" fftime="25" capacity="300" beta="4" alpha="0.15" directed="true"/>
+    <edge id="Q0Q" from="Q0" to="Q" fftime="0" capacity="0" beta="0" alpha="0" directed="true"/>
+    <edge id="Q1Q" from="Q1" to="Q" fftime="0" capacity="0" beta="0" alpha="0" directed="true"/>
+</graph>

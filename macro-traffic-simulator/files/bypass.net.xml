@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<graph>
+    <node id="A"/>
+    <node id="C"/>
+    <node id="B0"/>
+    <node id="B1"/>
+         
+    <edge id="AB0" from="A" to="B0" fftime="10" capacity="3000" beta="0.02" alpha="0" directed="true"/>
+    <edge id="AB1" from="A" to="B1" fftime="15" capacity="1000" beta="0.005" alpha="0" directed="true"/>
+    <edge id="B0C" from="B0" to="C" fftime="0" capacity="0" beta="0" alpha="0" directed="true"/>
+    <edge id="B1C" from="B1" to="C" fftime="0" capacity="0" beta="0" alpha="0" directed="true"/>
+</graph>

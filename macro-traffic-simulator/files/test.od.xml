@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<od-matrix>
+	<od1 origin="A" destination="B" trips="1"/>
+	<od1 origin="B" destination="A" trips="1"/>
+	<od1 origin="A" destination="C" trips="1"/>
+	<od1 origin="C" destination="A" trips="1"/>
+	<od origin="A" destination="D" trips="1"/>
+	<od1 origin="D" destination="A" trips="1"/>
+	<od1 origin="B" destination="C" trips="1"/>
+	<od1 origin="C" destination="B" trips="1"/>
+	<od1 origin="B" destination="D" trips="1"/>
+	<od1 origin="D" destination="B" trips="1"/>
+	<od1 origin="C" destination="D" trips="1"/>
+	<od1 origin="D" destination="C" trips="1"/>
+</od-matrix>

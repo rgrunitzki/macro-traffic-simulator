@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<graph>
+	<node id="A"/>
+	<node id="B"/>
+	<node id="C"/>
+	<node id="D"/>
+	<edge id="AB" from="A" to="B" weight="10"/>
+	<edge id="BA" from="B" to="A" weight="15"/>
+	<edge id="AC" from="A" to="C" weight="20"/>
+	<edge id="CA" from="C" to="A" weight="15"/>
+	<edge id="BC" from="B" to="C" weight="25"/>
+	<edge id="BD" from="B" to="D" weight="15"/>
+	<edge id="DB" from="D" to="B" weight="10"/>
+	<edge id="CD" from="C" to="D" weight="15"/>
+	<edge id="DC" from="D" to="C" weight="20"/>
+	<!-- 
+		AD: ABD=25 ACD=35 ABCD=50s
+		DA: DBA=25 DCA=35 DBCA=50
+	-->
+</graph>
