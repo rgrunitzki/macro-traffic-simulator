@@ -69,6 +69,7 @@ public class ProcessFiles<T extends Driver> {
                         stringToFloat(e.getAttribute("fftime")),
                         stringToFloat(e.getAttribute("alpha")),
                         stringToFloat(e.getAttribute("beta")),
+                        stringToFloat(e.getAttribute("lenght")),
                         costFunction
                 ));
 //                this line prints edges' parameters

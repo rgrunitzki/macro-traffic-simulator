@@ -54,7 +54,12 @@ public class Edge implements Comparable<Edge> {
      * float value representing method of successive averages flow.
      */
     private float msaFlow;
-
+    
+    /**
+     * float value representing method of successive averages flow.
+     */
+    private float lenght;
+    
     /**
      * float value representing the current travel time on link.
      */
@@ -87,7 +92,7 @@ public class Edge implements Comparable<Edge> {
      * @param costFunction cost function object
      */
     public Edge(String id, Vertex from, Vertex to, float capacity, boolean directed,
-            float freeflow, float alpha, float beta, CostFunction costFunction) {
+            float freeflow, float alpha, float beta, float lenght, CostFunction costFunction) {
         this.id = id;
         this.undirected = !directed;
 
@@ -105,7 +110,8 @@ public class Edge implements Comparable<Edge> {
 
         this.totalFlow = 0;
         this.msaFlow = 0;
-
+        
+        this.lenght = lenght;
         this.capacity = capacity;
         this.cost = freeflow;
         this.freeFlowCost = freeflow;
@@ -157,10 +163,6 @@ public class Edge implements Comparable<Edge> {
         this.totalFlow = 0;
     }
 
-//    @Override
-//    public int compareTo(Edge edge2) {
-//        return this.toString().compareTo(edge2.toString());
-//    }
     /**
      * this method updates <code>msaFlow</code> attribute based on method of
      * successive averages rules. The update rule used is defined on
@@ -173,11 +175,7 @@ public class Edge implements Comparable<Edge> {
     }
 
     public float msaCost() {
-//        if (Params.EPISODE == 1) {
-//            return costFunction.evalCost(this, this.vehiclesHere);
-//        } else {
         return costFunction.evalCost(this, this.msaFlow);
-//        }
     }
 
     public void afterEpisode() {
@@ -192,13 +190,6 @@ public class Edge implements Comparable<Edge> {
         this.id = id;
     }
 
-//    public boolean isUndirected() {
-//        return undirected;
-//    }
-//
-//    public void setUndirected(boolean undirected) {
-//        this.undirected = undirected;
-//    }
     public Vertex getFrom() {
         return from;
     }
@@ -269,6 +260,14 @@ public class Edge implements Comparable<Edge> {
 
     public void setMsaFlow(float msaFlow) {
         this.msaFlow = msaFlow;
+    }
+
+    public float getLenght() {
+        return lenght;
+    }
+
+    public void setLenght(float lenght) {
+        this.lenght = lenght;
     }
 
     public float getCost() {

@@ -40,4 +40,14 @@ public class QTable {
         }
     }
 
+    public int size() {
+        int counter = 0;
+        for (Vertex v : table.keySet()) {
+            for (Edge e : table.get(v).keySet()) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
 }

@@ -41,25 +41,18 @@ public class Main {
         Params.PRINT_ON_FILE = false;
         Params.PRINT_ON_TERMINAL = true;
         Params.PRINT_ON_EPISODE = true;
-        Params.NETWORK = Network.Ortuzar ;
-        Params.K_ROUTES = 4;
+        Params.NETWORK = Network.Ortuzar;
+        Params.K_ROUTES = 8;
         Params.ALGORITHM = Algorithm.IQLearning;
 
         Params.QL_ALPHA = 0.5f;
         Params.QL_GAMMA = 0.99f;
         Params.RUNS = 1;
 
-        //alpha
-//        for (Params.QL_ALPHA = 0.1f; Params.QL_ALPHA <= 1.0f; Params.QL_ALPHA += 0.1f) {
-        //gamma
-//            for (Params.QL_GAMMA = 0.1f; Params.QL_GAMMA <= 1.0f; Params.QL_GAMMA += 0.1f) {
-//        for (Params.K_ROUTES = 4; Params.K_ROUTES <= 16; Params.K_ROUTES += 2) {
-
         /*
          *Set the network
          */
-        Graph graph = null;
-        graph = defineNetwork(Params.NETWORK);
+        Graph graph = defineNetwork(Params.NETWORK);
         Params.DEMAND_FACTOR = 1.0f;
 
         System.out.println("experiment_id\t" + Params.EXPERIMENT_ID + "\tK=" + Params.K_ROUTES);
@@ -98,13 +91,10 @@ public class Main {
             }
 
             simulation.start();
-//            simulation.printLinksFlow();
+            simulation.printLinksFlow();
 
             //print the simulation time
 //            System.out.println("Simulation time...\n\t " + getTime(System.currentTimeMillis() - time));
-//                }
-//            }
-//            }
         }
 
     }

@@ -1,6 +1,7 @@
 package simulation;
 
 import driver.Driver;
+import driver.learning.IndividualQLearning;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -334,7 +335,7 @@ public class Simulation<T extends Driver> {
 
             } else {
                 printOnEnd = Params.CURRENT_RUN != 1;
-                file_name = File.separator + Params.RUNS + "_runs_results"+"a="+Params.QL_ALPHA+"g="+Params.QL_GAMMA;
+                file_name = File.separator + Params.RUNS + "_runs_results" + "a=" + Params.QL_ALPHA + "g=" + Params.QL_GAMMA;
             }
 
             try {
@@ -365,4 +366,5 @@ public class Simulation<T extends Driver> {
         }
 
     }
+
 }
